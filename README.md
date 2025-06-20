@@ -1,4 +1,4 @@
-# Integrate Temporal Graph Learning into LLM-based Temporal Knowledge Graph Model
+# TGL-LLM: Integrate Temporal Graph Learning into LLM-based Temporal Knowledge Graph Model
 
 This is the official implementation repository of our paper:  
 **Integrate Temporal Graph Learning into LLM-based Temporal Knowledge Graph Model**.
