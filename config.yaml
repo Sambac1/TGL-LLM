@@ -1,0 +1,74 @@
+IR:
+  tkg_path: "./checkpoints/regcn/IR/REGCN"
+  data_path: "./data/"
+  base_model: "YOUR_BASE_MODEL_PATH" # Path to your base model, e.g., Llama-2-7b-chat-hf
+
+  batch_size: 128
+  batch_size_train: 32 # the batch size for training
+  batch_size_test: 40 #40 # the batch size for testing
+  num_sample_train: 10000
+  train_epoch: 1
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 3
+  
+
+IS:
+  tkg_path: "./checkpoints/regcn/IS/REGCN"
+  data_path: "./data/"
+  base_model: "YOUR_BASE_MODEL_PATH" # Path to your base model, e.g., Llama-2-7b-chat-hf
+
+  batch_size: 128
+  batch_size_train: 32 # the batch size for training
+  batch_size_test: 40 # the batch size for testing
+  num_sample_train: 10000
+  train_epoch: 1
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  # global_graph: "train" # which graph to use to global graph propagation
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 3
+
+
+EG:
+  tkg_path: "./checkpoints/regcn/EG/REGCN"
+  data_path: "./data/"
+  base_model: "YOUR_BASE_MODEL_PATH" # Path to your base model, e.g., Llama-2-7b-chat-hf
+
+  batch_size: 128
+  batch_size_train: 32 # the batch size for training
+  batch_size_test: 40 # the batch size for testing
+  num_sample_train: 10000
+  train_epoch: 1
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 1

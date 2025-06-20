@@ -1,0 +1,12 @@
+# Ignore model checkpoints and data files
+checkpoints/
+data/
+logs/
+runs/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/

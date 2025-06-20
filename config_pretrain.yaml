@@ -1,0 +1,96 @@
+IR:
+  path: "./data"
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  global_graph: "train" # which graph to use to global graph propagation
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  n_epochs: 30 # number of training epochs
+  patience: 5 # early stop patience
+  lr: 0.001 # learning rate
+  wd: 1.0e-6 # weight decay
+  grad_norm: 1.0 # norm to clip gradient to
+  hit_ks: [1, 3, 10]
+
+  test_interval: 1 # perform evaluation every n epochs
+  decoder_name: "convtranse" # decoder: convtranse & DNN
+  encoder_name: "uvrgcn" # options: uvrgcn, lightgcn
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 3
+  query_len: 3
+  candidate_len: 3
+  static_len: 2
+
+  c_dim: [128, 64] # channel dim for disengcn
+  ishierarchical: False
+
+IS:
+  path: "./data"
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  global_graph: "train" # which graph to use to global graph propagation
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  n_epochs: 30 # number of training epochs
+  patience: 5 # early stop patience
+  lr: 0.001 # learning rate
+  wd: 1.0e-6 # weight decay
+  grad_norm: 1.0 # norm to clip gradient to
+  hit_ks: [1, 3, 10]
+
+  test_interval: 1 # perform evaluation every n epochs
+  decoder_name: "convtranse" # decoder
+  encoder_name: "uvrgcn" # options: uvrgcn, lightgcn
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 3
+  query_len: 3
+  candidate_len: 3
+  static_len: 2
+
+  c_dim: [128, 64] # channel dim for disengcn
+
+EG:
+  path: "./data"
+
+  dropout: 0.2 # dropout for GNN msg passing
+  self_loop: True
+  skip_connect: false # whether to use skip connect in a RGCN Unit
+  h_dim: 200 # hidden dim
+  global_graph: "train" # which graph to use to global graph propagation
+  n_bases: 100 # number of weight blocks for each relation
+  n_layers: 2 # number of propagation layers 
+
+  n_epochs: 30 # number of training epochs
+  patience: 5 # early stop patience
+  lr: 0.001 # learning rate
+  wd: 1.0e-6 # weight decay
+  grad_norm: 1.0 # norm to clip gradient to
+  hit_ks: [1, 3, 10]
+
+  test_interval: 1 # perform evaluation every n epochs
+  decoder_name: "convtranse" # decoder
+  encoder_name: "uvrgcn" # options: uvrgcn, lightgcn
+  input_dropout: 0.2 # input dropout in decoder
+  hidden_dropout: 0.2 # hidden dropout in decoder
+  feat_dropout: 0.2 # feat dropout in decoder
+
+  hist_len: 3
+  query_len: 3
+  candidate_len: 3
+  static_len: 2
+
+  c_dim: [128, 64] # channel dim for disengcn
